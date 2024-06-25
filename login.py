@@ -40,10 +40,10 @@ class MainWindow:
         self.entPassword = Entry(self.LoginFrame1, font="Helvetica 14 bold", show="*", textvariable=self.Password, bd=2)
         self.entPassword.grid(row=1, column=1)
 
-        self.btnLogin = Button(self.LoginFrame2, text="Login", font="Helvetica 10 bold", width=10, bg="teal", command=self.Login_system)
+        self.btnLogin = Button(self.LoginFrame2, text="Login", font="Helvetica 10 bold", width=10, bg="light green", command=self.Login_system)
         self.btnLogin.grid(row=3, column=0)
 
-        self.btnExit = Button(self.LoginFrame2, text="Exit", font="Helvetica 10 bold", width=10, bg="teal", command=self.Exit)
+        self.btnExit = Button(self.LoginFrame2, text="Exit", font="Helvetica 10 bold", width=10, bg="light coral", command=self.Exit)
         self.btnExit.grid(row=3, column=1)
 
     def Login_system(self):
