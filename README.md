@@ -6,5 +6,5 @@ When the database.py file is executed, a database containing all the necessary t
 
 Login Info:
        User Name      Password
-       admin          2024
-       user           2420
+1.     admin          2024
+2.     user           2420
