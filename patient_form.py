@@ -46,7 +46,7 @@ class Patient:
             ("PATIENT ID", self.pat_ID, 0, 0),
             ("PATIENT NAME", self.pat_name, 1, 0),
             ("SEX", self.pat_sex, 2, 0),
-            ("DOB (YYYY-MM-DD)", self.pat_dob, 3, 0),
+            ("DOB (DD-MM-YYYY)", self.pat_dob, 3, 0),
             ("BLOOD GROUP", self.pat_BG, 4, 0),
             ("CONTACT NUMBER", self.pat_contact, 0, 2),
             ("ALTERNATE CONTACT", self.pat_contactalt, 1, 2),

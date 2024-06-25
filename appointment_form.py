@@ -54,7 +54,7 @@ class Appointment:
         self.lblapt_entry = Entry(self.LoginFrame, font="Helvetica 14 bold", bd=2, textvariable=self.ap_time)
         self.lblapt_entry.grid(row=0, column=3)
 
-        self.lblapd = Label(self.LoginFrame, text="APPOINTMENT DATE(YYYY-MM-DD)", font="Helvetica 14 bold", bg="light green", bd=22)
+        self.lblapd = Label(self.LoginFrame, text="APPOINTMENT DATE(DD-MM-YYYY)", font="Helvetica 14 bold", bg="light green", bd=22)
         self.lblapd.grid(row=1, column=2)
         self.lblapd_entry = Entry(self.LoginFrame, font="Helvetica 14 bold", bd=2, textvariable=self.ap_date)
         self.lblapd_entry.grid(row=1, column=3)
@@ -116,7 +116,7 @@ class DEL_AP:
     def __init__(self, master):
         self.master = master
         self.master.title("HOSPITAL MANAGEMENT SYSTEM")
-        self.master.geometry("1500x700+0+0")
+        self.master.geometry("1600x800+0+0")
         self.master.config(bg="light green")
         self.frame = Frame(self.master, bg="light green")
         self.frame.pack()
@@ -155,7 +155,7 @@ class SEA_AP:
     def __init__(self, master):
         self.master = master
         self.master.title("HOSPITAL MANAGEMENT SYSTEM")
-        self.master.geometry("1500x700+0+0")
+        self.master.geometry("1600x800+0+0")
         self.master.config(bg="light green")
         self.frame = Frame(self.master, bg="light green")
         self.frame.pack()
@@ -168,7 +168,7 @@ class SEA_AP:
         self.LoginFrame2 = Frame(self.frame, width=400, height=80, relief="ridge", bg="light green", bd=20)
         self.LoginFrame2.grid(row=2, column=0)
         # =========== LABELS ==============
-        self.lblpatid = Label(self.LoginFrame, text="ENTER DATE TO VIEW APPOINTMENTS(YYYY-MM-DD)", font="Helvetica 14 bold", bg="light green", bd=22)
+        self.lblpatid = Label(self.LoginFrame, text="ENTER DATE TO VIEW APPOINTMENTS(DD-MM-YYYY)", font="Helvetica 14 bold", bg="light green", bd=22)
         self.lblpatid.grid(row=0, column=0)
         self.lblpatid_entry = Entry(self.LoginFrame, font="Helvetica 14 bold", bd=2, textvariable=self.entry)
         self.lblpatid_entry.grid(row=0, column=1)

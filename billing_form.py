@@ -41,13 +41,13 @@ class Billing:
         self.entpid = Entry(self.LoginFrame, font="Helvetica 14 bold", bd=2, textvariable=self.P_id)
         self.entpid.grid(row=0, column=1)
 
-        self.lbldid = Label(self.LoginFrame, text="DATE DISCHARGED (YYYY-MM-DD)", font="Helvetica 14 bold",
+        self.lbldid = Label(self.LoginFrame, text="DATE DISCHARGED (DD-MM-YYYY)", font="Helvetica 14 bold",
                             bg="light green", bd=22)
         self.lbldid.grid(row=1, column=0)
         self.entdid = Entry(self.LoginFrame, font="Helvetica 14 bold", bd=2, textvariable=self.dd)
         self.entdid.grid(row=1, column=1)
         self.btnUpdateDate = Button(self.LoginFrame, text="UPDATE DISCHARGE DATE", width=25, font="Helvetica 14 bold",
-                                    bg="light green", command=self.UPDATE_DATE)
+                                    bg="yellow", command=self.UPDATE_DATE)
         self.btnUpdateDate.grid(row=1, column=3)
 
         self.lbltreat = Label(self.LoginFrame, text="TREATMENT", font="Helvetica 14 bold", bg="light green", bd=22)
@@ -131,9 +131,9 @@ class Billing:
             cursor = conn.execute("SELECT sum(T_COST + (M_COST * M_QTY) + (julianday(DATE_DISCHARGED) - julianday(DATE_ADMITTED)) * RATE) FROM ROOM NATURAL JOIN TREATMENT NATURAL JOIN MEDICINE WHERE PATIENT_ID=?", (b1,))
             for row in cursor:
                 total_amount = row[0]
-                self.lblTotalAmount = Label(self.LoginFrame, text="TOTAL AMOUNT OUTSTANDING", font="Helvetica 14 bold", bg="cadet blue", bd=22)
+                self.lblTotalAmount = Label(self.LoginFrame, text="TOTAL AMOUNT OUTSTANDING", font="Helvetica 14 bold", bg="light green", bd=22)
                 self.lblTotalAmount.grid(row=5, column=0)
-                self.lblTotalAmountValue = Label(self.LoginFrame, text=f"₹ {total_amount:.2f}", font="Helvetica 14 bold", bg="cadet blue", bd=22)
+                self.lblTotalAmountValue = Label(self.LoginFrame, text=f"₹ {total_amount:.2f}", font="Helvetica 14 bold", bg="light green", bd=22)
                 self.lblTotalAmountValue.grid(row=5, column=1)
         except Exception as e:
             tkinter.messagebox.showerror("HOSPITAL DATABASE SYSTEM", f"Error: {e}")
